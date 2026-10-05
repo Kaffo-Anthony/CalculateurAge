@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CalculateurAge.MainPage"
+		xmlns:viewmodels="clr-namespace:CalculateurAge.ViewModels"
+		x:DataType="viewmodels:BaseViewModel"
+			 x:Class="CalculateurAge.MainPage"
              Title="Calculateur">
              
 <ScrollView>
@@ -14,6 +16,7 @@
     <Button Text="Effacer" Command="{Binding EffacerCommand}"/>   
     <Label Text="{Binding Resultat}" FontSize="20" IsVisible="{Binding ResultatVisible}"/>
     <Label Text="{Binding Message}" FontSize="18" IsVisible="{Binding ResultatVisible}"/>
+    <Label Text="{Binding JoursRestants}" FontSize="16" IsVisible="{Binding ResultatVisible}"/>
   </VerticalStackLayout>
 </ScrollView>
 
