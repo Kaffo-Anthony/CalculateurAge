@@ -6,7 +6,7 @@ namespace CalculateurAge.ViewModels;
 public class BaseViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
-
+    
     protected void OnPropertyChanged([CallerMemberName] string nom = null)
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nom));
 
